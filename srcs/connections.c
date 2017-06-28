@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/27 01:14:30 by tpan              #+#    #+#             */
-/*   Updated: 2017/06/27 01:14:34 by tpan             ###   ########.fr       */
+/*   Created: 2017/06/27 16:39:31 by tpan              #+#    #+#             */
+/*   Updated: 2017/06/27 16:39:32 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	new_connection_array(t_room *room, int neighbor)
 {
-	room->connections = (int*)malloc(sizeof(int) * 2);
+	room->connections = (int*)malloc(sizeof(int));
 	room->connections[0] = neighbor;
 }
 
@@ -43,6 +43,8 @@ void	add_connection(t_lemin *everything, int room, int neighbor)
 	int i;
 
 	i = 0;
+	if (room > (*everything).r_ct)
+		return ;
 	while (i < (*everything).rooms[room].c_count)
 	{
 		if ((*everything).rooms[room].connections)

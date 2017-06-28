@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/27 01:15:25 by tpan              #+#    #+#             */
-/*   Updated: 2017/06/27 01:15:28 by tpan             ###   ########.fr       */
+/*   Created: 2017/06/27 16:39:08 by tpan              #+#    #+#             */
+/*   Updated: 2017/06/27 16:39:09 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,10 @@ int		is_ant(char **line, t_lemin *everything)
 	i = 0;
 	while (is_comment(line))
 		;
-	while (ft_isdigit(line[0][i++]))
-		;
+	while (ft_isdigit(line[0][i]))
+		i++;
+	if (line[0][0] == '\0')
+		return (0);
 	if (line[0][i] != '\0')
 		return (0);
 	everything->ant_count = ft_atoi(*line);

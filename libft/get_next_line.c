@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmerrill <bmerrill@student.42.us.org>      +#+  +:+       +#+        */
+/*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 16:30:05 by bmerrill          #+#    #+#             */
-/*   Updated: 2017/06/18 02:31:53 by bmerrill         ###   ########.fr       */
+/*   Created: 2017/06/27 17:57:48 by tpan              #+#    #+#             */
+/*   Updated: 2017/06/27 17:57:48 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 #define LIST_STR (char*)fd_node->content

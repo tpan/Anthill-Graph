@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/27 01:15:42 by tpan              #+#    #+#             */
-/*   Updated: 2017/06/27 01:15:43 by tpan             ###   ########.fr       */
+/*   Created: 2017/06/27 16:49:29 by tpan              #+#    #+#             */
+/*   Updated: 2017/06/27 16:49:30 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	init_ant_arr(int **ant_arr, int num_ants)
 	int i;
 
 	i = 0;
-	(*ant_arr) = (int*)malloc(sizeof(int) * (num_ants + 1));
+	(*ant_arr) = (int*)malloc(sizeof(int) * (num_ants + 2));
 	while (i <= num_ants)
 	{
 		(*ant_arr)[i] = -1;
@@ -44,7 +44,7 @@ void	print_ants(t_lemin *everything)
 		i = 1;
 		while (ant_arr[i] < 0 && i < everything->ant_count + 1)
 			i++;
-		if (i > everything->ant_count)
+		if (i >= everything->ant_count + 1)
 			break ;
 		while (i <= everything->ant_count && ant_arr[i] != -1)
 		{
